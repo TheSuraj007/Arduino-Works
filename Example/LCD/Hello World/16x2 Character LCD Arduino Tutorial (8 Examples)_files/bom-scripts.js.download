@@ -1,0 +1,14 @@
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+
+window.onclick = function (a) {
+	var target = a.target;
+	var dropdown = document.getElementsByClassName("bom-dropdown-menu");
+	for (var i = 0; i < dropdown.length; i++) {
+		if (dropdown[i].previousElementSibling == target) {
+			target.nextElementSibling.classList.toggle("show");
+		} else {
+			dropdown[i].classList.remove('show');
+		}
+	}
+}
